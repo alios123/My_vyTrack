@@ -1,4 +1,4 @@
-package com.vytrack.test.login_page;
+package com.vytrack.test.login_test;
 
 import com.vytrack.util.ConfigurationReader;
 import com.vytrack.util.Driver;
