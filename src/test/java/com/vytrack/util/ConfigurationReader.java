@@ -11,8 +11,7 @@ public class ConfigurationReader {
     // It is private because I will be using only in this class
     private static Properties properties = new Properties();
 
-    // We want to open the properties file and load to properties object ONLY ONCE before reading
-    // having static block because static runs first
+
     static{
 
         try{

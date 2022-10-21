@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +17,7 @@ public class Driver {
 
     /*
     Making our 'driver' instance private, so that it is not reachable from outside of any class
-    We make it static, because we want it to run before anyting else,
+    We make it static, because we want it to run before anything else,
     also we will use it in static method
      */
     private static WebDriver driver;
@@ -46,6 +47,12 @@ public class Driver {
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
+                case "safari":
+                    WebDriverManager.safaridriver().setup();
+                    driver=new SafariDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
                     break;
             }
         }
