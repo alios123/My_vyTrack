@@ -52,5 +52,6 @@ public class LoginTest {
     @AfterMethod
     public void tearDown(){
         Driver.closeDriver();
+
     }
 }
